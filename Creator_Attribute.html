@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <input id="age" value="30">
+    <input type="button" value = "Click me!" id="btn">
+    <script>
+         'use strict';
+        // let age = document.getElementById('age');
+        //     function showUser(surname, name) {
+	    //        alert("Пользователь " + surname + " " + name + ", его возраст " + this.value);
+        //     }
+        //          showUser.apply(age, ["John", "Snow"]);
+
+              class Options {
+                  constructor(height, width, bg, fontSize, textAlign){
+                        this.height = height;
+                        this.width = width;
+                        this.bg = bg;
+                        this.fontSize = fontSize;
+                        this.textAlign = textAlign;
+                  }
+
+                  checkError(){
+                      console.log(this.height);
+                      console.log(this.width);
+                      console.log(this.bg);
+                      console.log(this.fontSize);
+                      console.log(this.textAlign);
+                  }
+
+
+
+                  creatDiv(){
+                       let block = document.createElement("div");
+                        block.className = "block";
+                        document.body.appendChild(block);
+                           block.textContent = 'Some text';
+                        let param = ` width: ${this.height};  height: ${this.width}; background-color: ${this.bg}; font-size: ${this.fontSize}; text-align: ${this.textAlign}; `;
+
+                           block.style.cssText = param;
+
+
+                        //    width: ${this.height};\
+                        //    height: ${this.width};\
+                        //    backgroundColor: ${this.bg};\
+                        //    fontSize: ${this.fontSize};\
+                        //    textAlign: ${this.textAlign};\
+
+                        //    block.style.width = this.height;
+                        //    block.style.height = this.width;
+                        //    block.style.backgroundColor = this.bg;
+                        //    block.style.fontSize = this.fontSize;
+                        //    block.style.textAlign = this.textAlign;
+
+                  }
+              }
+            
+        let obj = new Options("100px","100px","blue","30px","center");
+        obj.creatDiv();
+        obj.creatDiv();
+        obj.creatDiv();
+
+    </script>
+
+</body>
+</html>
