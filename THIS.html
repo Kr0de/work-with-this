@@ -9,14 +9,78 @@
 <body>
 
     <input id="age" value="30">
+    <input type="button" value = "Click me!" id="btn">
     <script>
-        'use strict';
-        let age = document.getElementById('age');
-            function showUser(surname, name) {
-	           alert("Пользователь " + surname + " " + name + ", его возраст " + this.value);
-            }
-                 showUser.apply(age, ["John", "Snow"]);
-              
+         'use strict';
+        // let age = document.getElementById('age');
+        //     function showUser(surname, name) {
+	    //        alert("Пользователь " + surname + " " + name + ", его возраст " + this.value);
+        //     }
+        //          showUser.apply(age, ["John", "Snow"]);
+
+              class Options {
+                  constructor(height, width, bg, fontSize, textAlign){
+                        this.height = height;
+                        this.width = width;
+                        this.bg = bg;
+                        this.fontSize = fontSize;
+                        this.textAlign = textAlign;
+                  }
+
+                  checkError(){
+                      console.log(this.height);
+                      console.log(this.width);
+                      console.log(this.bg);
+                      console.log(this.fontSize);
+                      console.log(this.textAlign);
+                  }
+
+
+
+                  creatDiv(){
+                       let block = document.createElement("div");
+                        block.className = "block";
+                        document.body.appendChild(block);
+                           block.textContent = 'Some text';
+                           block.style.width = "100px";
+                           block.style.height = "100px";
+                           block.style.backgroundColor = "red";
+
+
+                            // block.style.height = this.height;
+                            // block.style.width = this.width;
+                            // block.style.backgroundColor = this.bg;
+                            // block.style.fontSize = this.fontSize;
+                            // block.style.textAlign = this.textAlign;
+
+                  }
+              }
+            
+        let obj = new Options("100px","100px","red","30px","center");
+        obj.creatDiv();
+        obj.creatDiv();
+        obj.creatDiv();
+
+        //             let div = document.createElement("div");
+        //                 div.className = "block"
+                    
+        //                     div.textContent = 'Some text';
+        //                     div.style.height = "100px";
+        //                     div.style.width = "100px";
+        //                     div.style.backgroundColor = "red";
+        //                     div.style.fontSize = "16px";
+        //                     div.style.textAlign = "center";
+
+        // let btn = document.getElementById("btn");
+        //     btn.addEventListener('click', function(){
+        //         let block = document.createElement("div");
+        //                 block.className = "block";
+        //                 document.body.appendChild(block);
+        //                    block.textContent = 'Some text';
+        //                    block.style.width = "100px";
+        //                    block.style.height = "100px";
+        //                    block.style.backgroundColor = "red";
+        //     })
     </script>
 
 </body>
